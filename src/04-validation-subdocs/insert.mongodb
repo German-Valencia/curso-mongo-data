@@ -1,0 +1,10 @@
+use("ecommerce");
+
+db.products.insertOne({
+  name: "Camiseta",
+  sizes: ["XL"],
+  category: {
+    name: "name category",
+    image: "",
+  },
+});
