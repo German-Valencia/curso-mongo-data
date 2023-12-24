@@ -1,0 +1,7 @@
+use("ecommerce");
+
+db.users.insertOne({
+  last_name: "Molina",
+  email: "ger@gmail.com",
+  password: "---"
+});
