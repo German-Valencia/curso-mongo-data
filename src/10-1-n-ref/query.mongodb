@@ -1,0 +1,51 @@
+use("ecommerce");
+
+db.orders.find();
+// db.orders.find({ user_id: ObjectId("6589c3ffcfb7d2db97d7db34") });
+
+//para traer todos los usuarios con sus respectivas OC
+/* db.users.aggregate([
+  {
+    $lookup: {
+      from: 'orders',
+      localField: '_id',
+      foreignField: 'user_id',
+      as: 'order'
+    }
+  }
+]) */
+
+//para traer un usuario con sus respectivas OC
+db.users.aggregate([
+  {
+    $match: {
+      _id: ObjectId('6589c3a5ec0db903b34d7a79')
+    }
+  },
+  {
+    $lookup: {
+      from: "orders",
+      localField: "_id",
+      foreignField: "user_id",
+      as: "order",
+    },
+  },
+]);
+
+
+//para traer una orden con su respectivo usuario
+db.orders.aggregate([
+  {
+    $match: {
+      _id: ObjectId("658af141d8673f05c7c137ad"),
+    },
+  },
+  {
+    $lookup: {
+      from: "users",
+      localField: "user_id",
+      foreignField: "_id",
+      as: "user",
+    },
+  },
+]);

@@ -1,0 +1,16 @@
+use("ecommerce");
+
+db.stores.insertOne({
+  storeId: "ST001",
+  name: "Ger Store",
+  address: "Cr 234",
+});
+
+db.stores_details.insertOne({
+  storeId: "ST001",
+  description: "lorem ipsun",
+  manager: {
+    email: "ger@gmail.com",
+    cellphone: "316497",
+  },
+});

@@ -1,0 +1,10 @@
+use("ecommerce");
+
+db.users.insertOne({
+  last_name: "Molina",
+  email: "ger@gmail.com",
+  password: "asdASD321654",
+  role:"seller",
+  age: 19,
+  isSingle: true
+});

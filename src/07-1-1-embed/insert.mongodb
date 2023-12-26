@@ -1,0 +1,18 @@
+use("ecommerce");
+
+db.users.insertOne({
+  email: "ale@gmail.com",
+  password: "asdASD321",
+  role: "customer",
+  social_accounts: ["twitter", "facebook"],
+  address: {
+    street: "cra 91",
+    city: "Baranoa",
+    zip: "1111",
+  },
+  shipping_address: {
+    street: "cra 12",
+    city: "Baranoa",
+    zip: "1211",
+  },
+});

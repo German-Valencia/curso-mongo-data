@@ -1,0 +1,18 @@
+use("ecommerce");
+
+db.orders.insertOne({
+  user_id: ObjectId("6589c3ffcfb7d2db97d7db34"),
+  date: "2023-12-26",
+  items: [
+    {
+      name: "Zapatos",
+      price: 120,
+      qty: 1,
+    },
+    {
+      name: "Otra cosa",
+      price: 90,
+      qty: 1,
+    },
+  ],
+});
