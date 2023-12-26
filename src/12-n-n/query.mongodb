@@ -1,0 +1,18 @@
+use("ecommerce");
+
+db.products.find();
+//db.stores.find();
+
+//658b50a612c29afe1df36a01
+//658b52bbbbf357bbaa45479d
+
+db.products.aggregate([
+  {
+    $lookup: {
+      from: "stores",
+      localField: "stores_ids",
+      foreignField: "_id",
+      as: "stores",
+    },
+  },
+]);

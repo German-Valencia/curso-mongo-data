@@ -1,0 +1,8 @@
+use("ecommerce");
+
+db.orders.insertOne({
+  user_id: ObjectId("6589c3ffcfb7d2db97d7db34"),
+  date: "2023-12-26",
+  total: 0,
+  items: [],
+});

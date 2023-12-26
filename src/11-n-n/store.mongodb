@@ -1,0 +1,20 @@
+use("ecommerce");
+
+db.stores.insertMany([
+  {
+    name: "Store 1",
+    products_ids: [
+      ObjectId('6588c0d5d78467730db9f001'),
+      ObjectId('658b50a612c29afe1df36a01')
+    ],
+  },
+  {
+    name: "Store 2",
+    products_ids: [
+      ObjectId('658b50a612c29afe1df36a02'),
+      ObjectId('658b50a612c29afe1df36a03'),
+      ObjectId('6588c0d5d78467730db9f001'),
+      ObjectId('658b50a612c29afe1df36a01')
+    ],
+  },
+]);
